@@ -11,7 +11,7 @@ object pepita {
 	
 	method energia() {
 		return energia
-	}
+	} 
 }
 
 object alpiste {
@@ -41,3 +41,43 @@ object manzana {
 	}
 	
 }
+
+object pepon {
+
+  var energia = 30
+
+  method energia() {
+    return energia
+  }
+
+  method comer(alimento) {
+    energia = energia + (alimento.energiaQueAporta() / 2)
+  }
+
+  method volar(distancia) {
+    energia = energia - (20 + (2 * distancia))
+  }
+
+}
+
+object roque {
+
+  var ave = pepon
+  var cantidadDeVecesAlimentadas = 0
+
+  method cambiarAve(_ave) {
+    ave = _ave
+    cantidadDeVecesAlimentadas = 0
+  }
+
+  method alimentar(alimento) {
+    ave.comer(alimento)
+    cantidadDeVecesAlimentadas = cantidadDeVecesAlimentadas + 1
+  }
+
+  method cenas() {
+    return cantidadDeVecesAlimentadas
+  }
+
+}
+
