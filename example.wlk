@@ -62,22 +62,26 @@ object pepon {
 
 object roque {
 
-  var ave = pepon
-  var cantidadDeVecesAlimentadas = 0
+  	var ave = pepon
+  	var cantidadDeVecesAlimentadas = 0
 
-  method cambiarAve(_ave) {
-    ave = _ave
-    cantidadDeVecesAlimentadas = 0
-  }
+	method cantidadDeVecesAlimentadas(_cantidadDeVecesAlimentadas) {
+		cantidadDeVecesAlimentadas = _cantidadDeVecesAlimentadas
+	}
 
-  method alimentar(alimento) {
-    ave.comer(alimento)
-    cantidadDeVecesAlimentadas = cantidadDeVecesAlimentadas + 1
-  }
+	method cambiarAve(_ave) {
+    	ave = _ave
+    	cantidadDeVecesAlimentadas = 0
+	}
 
-  method cenas() {
-    return cantidadDeVecesAlimentadas
-  }
+	method alimentar(alimento) {
+    	ave.comer(alimento)
+    	self.cantidadDeVecesAlimentadas(cantidadDeVecesAlimentadas + 1)
+	}
+
+	method cenas() {
+    	return cantidadDeVecesAlimentadas
+	}
 
 }
 
