@@ -63,20 +63,20 @@ object pepon {
 object roque {
 
   	var ave = pepon
-  	var cantidadCenas = 0
+  	var cenas = 0
 
 	method cambiarAve(_ave) {
     	ave = _ave
-    	cantidadCenas = 0
+    	cenas = 0
 	}
 
 	method alimentar(alimento) {
     	ave.comer(alimento)
-    	cantidadCenas = cantidadCenas + 1
+    	cenas = cenas + 1
 	}
 
 	method cenas() {
-    	return cantidadCenas
+    	return cenas
 	}
 
 }
